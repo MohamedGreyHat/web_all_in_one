@@ -16,8 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from users import views as user_views
+from django.conf.urls.i18n import i18n_patterns
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+]
+
+urlpatterns += i18n_patterns(
     path('register/', user_views.register, name='register'),
     path('', include('blog.urls')),
-]
+)
