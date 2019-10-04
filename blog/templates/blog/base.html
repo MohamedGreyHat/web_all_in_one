@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <html> 
     <head>
         <meta charset="utf-8">
@@ -10,7 +11,7 @@
         {% if title %}
             <title>{{ title }}</title>
         {% else %}
-            <title>Static Home title</title>
+            <title>{% trans 'Static Home title' %}</title>
         {% endif %}
     </head>
     <body>
@@ -24,13 +25,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarToggle">
               <div class="navbar-nav mr-auto">
-                <a class="nav-item nav-link" href="{% url 'Blog-Home' %}">Home</a>
-                <a class="nav-item nav-link" href="{% url 'Blog-About' %}">About</a>
+                <a class="nav-item nav-link" href="{% url 'Blog-Home' %}">{% trans 'Home' %}</a>
+                <a class="nav-item nav-link" href="{% url 'Blog-About' %}">{% trans 'About' %}</a>
               </div>
               <!-- Navbar Right Side -->
               <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#">Login</a>
-                <a class="nav-item nav-link" href="#">Register</a>
+                <a class="nav-item nav-link" href="#">{% trans 'Login' %}</a>
+                <a class="nav-item nav-link" href="/register/">{% trans 'Register' %}</a>
               </div>
             </div>
           </div>
@@ -50,13 +51,12 @@
               </div>
               <div class="col-md-4">
                 <div class="content-section">
-                  <h3>Our Sidebar</h3>
-                  <p class='text-muted'>You can put any information here you'd like.
+                  <h3>{% trans 'Our Sidebar' %}</h3>
+                  <p class='text-muted'>{% trans "You can put any information here you'd like." %}
                     <ul class="list-group">
-                      <li class="list-group-item list-group-item-light">Latest Posts</li>
-                      <li class="list-group-item list-group-item-light">Announcements</li>
-                      <li class="list-group-item list-group-item-light">Calendars</li>
-                      <li class="list-group-item list-group-item-light">etc</li>
+                      <li class="list-group-item list-group-item-light">{% trans 'Latest Posts' %}</li>
+                      <li class="list-group-item list-group-item-light">{% trans 'Announcements' %}</li>
+                      <li class="list-group-item list-group-item-light">{% trans 'Calendars' %}</li>
                     </ul>
                   </p>
                 </div>
