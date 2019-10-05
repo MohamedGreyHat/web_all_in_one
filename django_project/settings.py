@@ -129,3 +129,6 @@ LOCALE_PATHS = [
 STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'Blog-Home'
+LOGIN_URL = 'login'
