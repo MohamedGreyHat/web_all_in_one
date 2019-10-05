@@ -7,8 +7,9 @@ user_language = 'fi'
 def register(request):
     # translation.activate(user_language)
     # request.session[translation.LANGUAGE_SESSION_KEY] = user_language
-    if translation.LANGUAGE_SESSION_KEY in  request.session:
-        del request.session[translation.LANGUAGE_SESSION_KEY]
+    # if translation.LANGUAGE_SESSION_KEY in  request.session:
+    #     del request.session[translation.LANGUAGE_SESSION_KEY]
+    
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
