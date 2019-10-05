@@ -20,9 +20,12 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
-
-urlpatterns += i18n_patterns(
     path('register/', user_views.register, name='register'),
     path('', include('blog.urls')),
-)
+]
+
+# urlpatterns += i18n_patterns(
+#     path('register/', user_views.register, name='register'),
+#     path('', include('blog.urls')),
+#     prefix_default_language = False,
+# )
